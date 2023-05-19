@@ -10,3 +10,15 @@ public:
 	Node* next;
 };
 
+class list
+{
+	Node* START;
+public:
+	list();
+	void addNode();
+	bool Search(int nim, Node** current, Node** previous);
+	bool listEmpty();
+	bool delNode(int element);
+	void traverse();
+};
+
