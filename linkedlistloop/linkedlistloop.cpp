@@ -70,4 +70,24 @@ void list::addNode()/*menambah sebuah node ke dalam list*/
 	previous->next = nodeBaru;
 }
 
+bool list::listEmpty()
+{
+	if (START == NULL)
+		return true;
+	else
+		return false;
+}
+bool list::delNode(int nim)/*menghapus node dari dalam list*/
+{
+	Node* current, * previous;
+	if (Search(nim, &previous, &current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = START->next;
+
+	delete current;
+	return true;
+}
+
 
