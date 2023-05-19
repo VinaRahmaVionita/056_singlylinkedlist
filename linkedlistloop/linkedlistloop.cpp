@@ -103,5 +103,8 @@ bool list::Search(int nim, Node** previous, Node** current)
 	return (*current != NULL);
 }
 
-
-
+void list::traverse()/*mengunjungi dan membaca data dalam list*/
+{
+	if (listEmpty())
+		cout << "\nList Kosong\n";
+	
